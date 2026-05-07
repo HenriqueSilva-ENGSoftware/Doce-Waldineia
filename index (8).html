@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#2a2a2e",
+                        "on-tertiary-fixed-variant": "#c9c5bc",
+                        "surface-tint": "#d4a5a8",
+                        "inverse-on-surface": "#1a1717",
+                        "secondary": "#d4b46a",
+                        "on-tertiary": "#1a1717",
+                        "on-surface-variant": "#a8a0a0",
+                        "surface-bright": "#1f1c1c",
+                        "surface": "#161313",
+                        "on-background": "#ede6e5",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#1c1500",
+                        "on-primary": "#1a1717",
+                        "background": "#161313",
+                        "outline": "#5a5252",
+                        "outline-variant": "#3a3434",
+                        "inverse-primary": "#815255",
+                        "on-secondary-fixed-variant": "#d4b46a",
+                        "surface-container-low": "#1c1818",
+                        "secondary-fixed": "#3a3000",
+                        "tertiary": "#a8a59c",
+                        "primary-container": "#3d2528",
+                        "on-primary-fixed": "#f4d5d7",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#f1b5b8",
+                        "primary": "#d4a5a8",
+                        "surface-container": "#221e1e",
+                        "error-container": "#5c1a17",
+                        "surface-container-highest": "#322c2c",
+                        "on-tertiary-container": "#d5d2c9",
+                        "secondary-container": "#3d3000",
+                        "surface-container-high": "#2a2525",
+                        "primary-fixed": "#3d2528",
+                        "on-tertiary-fixed": "#e7e3da",
+                        "surface-dim": "#161313",
+                        "on-surface": "#ede6e5",
+                        "surface-container-lowest": "#0f0d0d",
+                        "inverse-surface": "#ede6e5",
+                        "secondary-fixed-dim": "#d4b46a",
+                        "primary-fixed-dim": "#d4a5a8",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#e9c97a",
+                        "on-primary-fixed-variant": "#f1b5b8",
+                        "on-secondary": "#1a1717",
+                        "tertiary-fixed-dim": "#3a3434",
+                        "tertiary-container": "#2a2625",
+                        "surface-variant": "#322c2c"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="bg-[#161313]/90 backdrop-blur-md sticky top-0 z-50 border-b border-white/5 shadow-sm">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-on-surface active:scale-95 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-on-surface font-display-lg">Doce Waldineia</h1>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="nav-link active text-primary font-semibold font-label-md" href="#">Início</a>
+<a class="nav-link text-on-surface/70 hover:text-primary transition-colors font-label-md" href="#menu">Cardápio</a>
+<a class="nav-link text-on-surface/70 hover:text-primary transition-colors font-label-md" href="#sobre">Sobre</a>
+<a class="nav-link text-on-surface/70 hover:text-primary transition-colors font-label-md" href="#contato">Pedido</a>
+</nav>
+<button class="text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative w-full min-h-[707px] flex items-center overflow-hidden artisanal-gradient px-margin-mobile md:px-margin-desktop py-12">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1 space-y-8 reveal-stagger">
+<div class="live-pulse inline-flex items-center pl-9 pr-5 py-2.5 bg-primary-container/40 backdrop-blur-sm text-on-primary-container rounded-full shadow-lg ring-1 ring-primary/30">
+<span class="text-label-md">Aceitando encomendas para Maio</span>
+</div>
+<h2 class="text-display-lg font-display-lg leading-tight headline-fancy"><span class="hero-title">Doces feitos com amor</span> e <em>sabor de verdade</em></h2>
+<p class="text-body-lg text-on-surface-variant max-w-lg">Transformamos ingredientes selecionados em memórias afetivas. Confeitaria artesanal com o toque caseiro que sua celebração merece.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="btn-shine btn-glow bg-primary text-on-primary font-label-md px-8 py-4 rounded-full shadow-lg active:scale-95">Ver Cardápio</button>
+<button class="btn-shine border-2 border-primary/40 text-on-surface font-label-md px-8 py-4 rounded-full hover:bg-primary/10 active:scale-95">Encomendar via WhatsApp</button>
+</div>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="hero-img-frame aspect-square rounded-[40px] overflow-hidden shadow-2xl rotate-3 scale-95 border-8 border-white/10 img-zoom-wrap">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" data-alt="A luxurious close-up of a handmade artisan cake decorated with fresh berries and soft pink frosting. The lighting is warm and natural, suggesting a cozy afternoon in a boutique bakery. The background is a soft beige linen cloth, creating a tactile and nostalgic atmosphere that highlights the premium ingredients and handmade quality of the pastry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3O8XQFzgG77CgvU_Rbp8mKqU0xgN_zA19LPE6EOP-3yNH3GZ8GsRf5YOX-xPx1Fy3A3NbLY9N6OSvXEDioKCvudqLAG4mMkZXtJyfuFedoGE83s61R-ky-mHQEvTOClRjaEdHTLVAGBYgI90yyYKcCjM4mOaMRP4IKpNuBqOPP-OUKWLJOxuvHjVCvfrmSj_yCEyiU7JNEykI6nPZkz4ADWzZ4bnsnJkdIN5ReieSL8S1P-MO2FQyI73drzv6R6dASxz7YPoJ9AQ"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-high/90 backdrop-blur-md p-6 rounded-3xl shadow-2xl hidden lg:block border border-primary/20" style="animation: float 4s ease-in-out infinite;">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Receita Original</p>
+<p class="text-xs text-on-surface-variant">Desde 2015</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Catalog -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="menu">
+<div class="text-center mb-16 reveal">
+<span class="text-secondary text-xs tracking-[0.3em] uppercase font-bold"><span class="gold-line"></span>Cardápio<span class="gold-line"></span></span>
+<h2 class="text-headline-lg font-headline-lg mb-6 mt-4 headline-fancy">Nossas <em>delícias</em></h2>
+<div class="flex justify-center gap-3 flex-wrap">
+<button class="px-6 py-2.5 rounded-full bg-primary text-on-primary font-label-md shadow-lg shadow-primary/30 hover:scale-105 transition-transform">Todos</button>
+<button class="px-6 py-2.5 rounded-full border border-outline-variant text-on-surface-variant font-label-md hover:border-primary hover:text-primary transition-all">Doces</button>
+<button class="px-6 py-2.5 rounded-full border border-outline-variant text-on-surface-variant font-label-md hover:border-primary hover:text-primary transition-all">Salgados</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter reveal-stagger">
+<!-- Product 1 -->
+<div class="product-card group bg-surface-container-lowest rounded-[32px] overflow-hidden shadow-xl border border-white/5">
+<div class="aspect-video img-zoom-wrap">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A detailed shot of a traditional Brazilian Bolo de Rolo, showcasing its thin layers of delicate sponge cake rolled with rich guava paste. The light highlights the sugar dusting on top, presented on a rustic ceramic plate. The scene is warm and inviting, using soft pink and beige tones consistent with a premium confectionery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYUxQkIieOpCrSV5r-IIFYdJ7a2SHn7DsgBqUIAGjvY0rlUmC44NSis4UO0I1qr8BfqEUpN6gSQU6UVG9XjayQxUyuAsEVeLv2C_e00mKHBWONZOpvTJGekq5cdNb0u4GLZu8aJRjYXA6NDLKx0Bmy9tWZsjyimNqkFbFBp_TLavrONqRaigTrH458bPUOQzbUdZf4Tqc3aLs20Wi7gCe3AjSlfUB4Oivre7848QXKV-gZ5mNE2_FqiXo_1IKOfqcHVA5f3UMrQnA"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">Bolo de Rolo</h3>
+<span class="price-tag text-lg">R$ 45,00</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-6">Receita pernambucana autêntica com finas camadas de goiabada artesanal.</p>
+<button class="btn-shine w-full py-3 rounded-2xl bg-surface-container-high text-primary font-label-md group-hover:bg-primary group-hover:text-on-primary transition-all">Adicionar ao Pedido</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card group bg-surface-container-lowest rounded-[32px] overflow-hidden shadow-xl border border-white/5">
+<div class="aspect-video img-zoom-wrap">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close-up of golden-brown Coxinha Gourmet pastries arranged on a wooden board. The crust looks perfectly crispy, and one is slightly opened to reveal a creamy chicken filling. The lighting is soft and golden, emphasizing the homemade and artisanal nature of the savory snacks within a warm, inviting kitchen setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJe_6TcODlH4Yi8rFChIb2rdim_sy9IsXigEVxhB3krIJgdQt6iW6yJXguAAUvGPWEhwK4qqgvPPMPc2O5Rxq1cy6v5WhmnmdmGNh_QAop_xuKhGy_CAsW1HDqfFRnFRI7mweprB0KYDlNTyiDtuVmruZs0B6AYts9MTqp_zk-wzqvE-kPGJ6zRGCScec5JVQZ9efuAPCl3LWhcc4lySoLLqkXga2QUxq0fts55J4t5cOUwP4wShArpJQNBjqxVZHvdQSPvbGgTbo"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">Coxinha Gourmet</h3>
+<span class="price-tag text-lg">R$ 8,50/un</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-6">Massa de batata leve com recheio cremoso de frango desfiado e catupiry.</p>
+<button class="btn-shine w-full py-3 rounded-2xl bg-surface-container-high text-primary font-label-md group-hover:bg-primary group-hover:text-on-primary transition-all">Adicionar ao Pedido</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card group bg-surface-container-lowest rounded-[32px] overflow-hidden shadow-xl border border-white/5">
+<div class="aspect-video img-zoom-wrap">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A collection of Brigadeiro Gourmet chocolate truffles, beautifully decorated with diverse sprinkles and metallic gold leaf accents. They are presented in elegant paper liners on a white marble surface. The overall style is high-end and minimalist, featuring a soft pink and white color palette that evokes a sense of premium confectionery craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5lraxZ6oBF68w4juLBSGqgc13tZ6oFlAnf73LS1vwtuzJwviKNoeJCsOcVCr8vuclayla1hKUSqqgwl1T2FXOoyAp57YA84ix3z_8hgTVf6bQuyZTg7vRCrQEXCBSiyB6UyJbSSzoFMiZiefwvE5U8NHm09MOuXWCCkJTZNkWPeDihsjjkgLbSSlKlSOjdGNPFhPdO5PFBrrRzvFTq1WSQJAaw0r-BD-457mU6UhQAbYsD73ukCytYv_klC0gwdqfSuAAx2yUYgY"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-headline-md font-headline-md text-on-surface">Brigadeiro Gourmet</h3>
+<span class="price-tag text-lg">R$ 4,50/un</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-6">Chocolate belga 54% cacau com granulado de puro chocolate.</p>
+<button class="btn-shine w-full py-3 rounded-2xl bg-surface-container-high text-primary font-label-md group-hover:bg-primary group-hover:text-on-primary transition-all">Adicionar ao Pedido</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quem Sou Eu Section -->
+<section class="bg-surface-container-low py-24 px-margin-mobile md:px-margin-desktop overflow-hidden relative" id="sobre">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative reveal">
+<div class="hero-img-frame relative z-10 rounded-[60px] overflow-hidden border-4 border-white/10 shadow-2xl">
+<img class="w-full h-[500px] object-cover" data-alt="A warm and welcoming portrait of a woman baker in a clean, minimalist kitchen setting. She is wearing a soft beige apron and smiling gently, holding a tray of freshly baked cookies. The environment is filled with soft natural light, highlighting her friendly personality and the artisanal, handmade focus of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz2pxM432o948OlV27JFS19Z77jCKn66n3UPjOpHVGF6KoQ4U_9FZQp6mS2tf0KrV-3jT4fczqjQ0xW1YZKOBbLdg8MHofZ7ZabpNIt2NlD7nZXf0sTTenqxqbKby6Mi83VF_ssylsHegB84px1drrpBa5aM1rgpE4mva_HxZ4FPx6B_Npb4txjpmdeO87yU_YK35kDlRvmiJz86F6YVz5iOAPNbxeXVXH8yfqYBjLgst5M8DOx7x4dyUJ6WiXK84KzkOwpdULodU"/>
+</div>
+</div>
+<div class="space-y-6 reveal-stagger">
+<span class="text-secondary font-bold tracking-[0.3em] uppercase text-xs"><span class="gold-line"></span>A Alma do Doce</span>
+<h2 class="text-headline-lg font-headline-lg headline-fancy">Prazer, eu sou a <em>Waldineia</em></h2>
+<p class="text-body-lg text-on-surface-variant">Minha paixão pela confeitaria começou na cozinha da minha avó, onde aprendi que o segredo de um bom doce não está apenas na receita, mas no carinho colocado em cada etapa.</p>
+<p class="text-body-md text-on-surface-variant">Hoje, transformo esse legado em doces e salgados que levam sabor e afeto para a mesa de centenas de clientes. Cada encomenda é tratada como única, feita à mão com os melhores ingredientes.</p>
+<div class="pt-6">
+<div class="relative pl-8 py-4 border-l-2 border-primary/40">
+<span class="absolute -left-3 top-2 text-4xl text-primary leading-none font-serif">"</span>
+<p class="italic text-on-surface text-lg">Meu objetivo é que, ao morder um dos meus doces, você sinta aquele abraço que só a comida feita com amor pode dar.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Como Encomendar -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="encomendar">
+<div class="text-center mb-16 reveal">
+<span class="text-secondary text-xs tracking-[0.3em] uppercase font-bold"><span class="gold-line"></span>Simples e Rápido<span class="gold-line"></span></span>
+<h2 class="text-headline-lg font-headline-lg mt-4 headline-fancy">Como encomendar seu <em>momento doce</em></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-stagger">
+<div class="passo-card text-center space-y-4 p-10 rounded-[32px] bg-surface-container border border-white/5 backdrop-blur-sm" data-num="1">
+<div class="relative w-16 h-16 bg-gradient-to-br from-primary to-primary/60 rounded-2xl shadow-lg shadow-primary/30 flex items-center justify-center mx-auto text-on-primary">
+<span class="material-symbols-outlined text-3xl">list_alt</span>
+</div>
+<h3 class="text-headline-md font-headline-md relative">Escolha</h3>
+<p class="text-on-surface-variant relative">Navegue pelo nosso cardápio e escolha suas delícias favoritas. Mínimo de 10 unidades para docinhos.</p>
+</div>
+<div class="passo-card text-center space-y-4 p-10 rounded-[32px] bg-surface-container border border-white/5 backdrop-blur-sm" data-num="2">
+<div class="relative w-16 h-16 bg-gradient-to-br from-secondary to-secondary/60 rounded-2xl shadow-lg shadow-secondary/30 flex items-center justify-center mx-auto text-on-secondary">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</div>
+<h3 class="text-headline-md font-headline-md relative">Confirme</h3>
+<p class="text-on-surface-variant relative">Entre em contato via WhatsApp para confirmar disponibilidade de data e detalhes da entrega.</p>
+</div>
+<div class="passo-card text-center space-y-4 p-10 rounded-[32px] bg-surface-container border border-white/5 backdrop-blur-sm" data-num="3">
+<div class="relative w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl shadow-lg shadow-primary/30 flex items-center justify-center mx-auto text-on-primary">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<h3 class="text-headline-md font-headline-md relative">Pagamento</h3>
+<p class="text-on-surface-variant relative">Sinal de 50% via Pix para reserva da data. O restante no ato da entrega ou retirada.</p>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-surface-container py-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 reveal">
+<span class="text-secondary text-xs tracking-[0.3em] uppercase font-bold"><span class="gold-line"></span>Depoimentos<span class="gold-line"></span></span>
+<h2 class="text-headline-lg font-headline-lg mt-4 headline-fancy">O que nossos <em>clientes dizem</em></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal-stagger">
+<!-- Testimonial 1 -->
+<div class="testimonial-card bg-surface-container-high p-10 pt-12 rounded-[32px] shadow-xl border border-white/5 relative">
+<div class="flex text-secondary mb-4 relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-6 relative">O Bolo de Rolo da Waldineia é o melhor que já comi! Derrete na boca e o recheio é na medida certa. Recomendo muito!</p>
+<div class="flex items-center gap-4 relative">
+<div class="w-12 h-12 bg-primary-fixed rounded-full overflow-hidden ring-2 ring-primary/30">
+<img class="w-full h-full object-cover" data-alt="Customer testimonial avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2p31ao0upoH7BI4S8BUjb7yv4A5qZVB_7CWgEG_Q0xU3CStFBmlg3oZJQTWGmDe1RBHUo8vW8qpTICiWrDVL467a8kuUxbaqlRREDfpfqHHDXywNvtBvzmslN-y7oK8RC5G_7DC6zWYHjo0653IOSnbJVRNl_HbId-EM_hpwTYNrFkHniBgwbARh8kaYy1eYuQH3po-vrmzd9-ognZ-hDVZGGaQhAwy1yF9aiBB5gamcnKdSjmrDdPFNq88-_9w3tM83mwd0q7uw"/>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Mariana Silva</p>
+<p class="text-xs text-on-surface-variant">Cliente desde 2021</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="testimonial-card bg-surface-container-high p-10 pt-12 rounded-[32px] shadow-xl border border-white/5 relative md:-translate-y-8">
+<div class="flex text-secondary mb-4 relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-6 relative">Encomendei as coxinhas gourmet para o aniversário do meu filho e todos os convidados amaram. Super sequinhas e recheadas.</p>
+<div class="flex items-center gap-4 relative">
+<div class="w-12 h-12 bg-primary-fixed rounded-full overflow-hidden ring-2 ring-primary/30">
+<img class="w-full h-full object-cover" data-alt="Customer testimonial avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwx9LZu794e8JTXcjpp-eYMjM0Ke4Kr5gfcx2tnve8BYnaIrrUwjzmT0dzdo4u-9Ym-qJSlw2WKFDPwBDs5054Xt6mEAEqMPWfQNDW0r0a1_v0UP1VHSOf-qjpT2mcxZphyWWVzDrs6ZxjOyVeg-GmfCrna5BfpufQpm6gKuQun71PtDomidlBas-qbFavW1MbUtdZy9bfKW-NEqqj_f_9P1T_ZfhAxKZieTVXCINeixocX3fKGiYCs55aAGoASEX18G87yYOgekw"/>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Roberto Santos</p>
+<p class="text-xs text-on-surface-variant">Cliente VIP</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="testimonial-card bg-surface-container-high p-10 pt-12 rounded-[32px] shadow-xl border border-white/5 relative">
+<div class="flex text-secondary mb-4 relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-6 relative">Trabalho impecável. Os brigadeiros são uma obra de arte e o sabor é incomparável. Atendimento muito atencioso.</p>
+<div class="flex items-center gap-4 relative">
+<div class="w-12 h-12 bg-primary-fixed rounded-full overflow-hidden ring-2 ring-primary/30">
+<img class="w-full h-full object-cover" data-alt="Customer testimonial avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV9gMRA_g54htnI2_57XILT6fn551HSywIyPMto7J0faGxpgjtZ3dqwYc1txjomM8Shz2tYlCZzXQxa-l7rLrZ7jBrch9TJee1a72E16H_Gb-75kpelVDSxXkJwPW8a7sGscJIA-W71jHgnCGQCsaC2XkiKAW8Rv56v06q_EE_w-TniyyB5_ii_hyTdoyXkYq0iLxkR0_RJplPB89ppyAynxFML0wLrsAcXVrU6-4vjP4eJBQDpgcpkn60woz_hIPauqETyaZZIog"/>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Ana Paula J.</p>
+<p class="text-xs text-on-surface-variant">Cliente Fidelidade</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0f0d0d] border-t border-white/5 full-width py-12 px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto text-center md:text-left">
+<div>
+<h4 class="font-bold text-primary text-xl mb-4">Doce Waldineia</h4>
+<p class="font-['Plus_Jakarta_SANS'] text-sm leading-relaxed text-on-surface/60">Confeitaria artesanal feita com ingredientes premium e muito carinho para transformar seus momentos em memórias doces.</p>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-4">Explorar</h4>
+<ul class="space-y-2">
+<li><a class="text-on-surface/60 hover:text-primary transition-colors text-sm" href="#">Instagram</a></li>
+<li><a class="text-on-surface/60 hover:text-primary transition-colors text-sm" href="#">WhatsApp</a></li>
+<li><a class="text-on-surface/60 hover:text-primary transition-colors text-sm" href="#">Localização</a></li>
+<li><a class="text-on-surface/60 hover:text-primary transition-colors text-sm" href="#">Horários</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-4">Funcionamento</h4>
+<p class="text-on-surface/60 text-sm">Segunda a Sexta: 09h às 18h</p>
+<p class="text-on-surface/60 text-sm">Sábado: 09h às 14h</p>
+<p class="text-on-surface/60 text-sm mt-4">Retiradas agendadas previamente.</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/5 text-center">
+<p class="text-sm text-on-surface/60">© 2024 Doce Waldineia • Confeitaria Artesanal</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 md:hidden bg-[#0f0d0d]/95 backdrop-blur-lg border-t border-white/5 shadow-[0_-8px_30px_rgba(0,0,0,0.4)] z-50">
+<a class="flex flex-col items-center justify-center text-primary bg-primary/10 rounded-2xl px-4 py-1 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_SANS']">Início</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface/50 hover:bg-primary/5 active:scale-90 transition-all duration-200" href="#menu">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_SANS']">Cardápio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface/50 hover:bg-primary/5 active:scale-90 transition-all duration-200" href="#sobre">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_SANS']">Sobre</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface/50 hover:bg-primary/5 active:scale-90 transition-all duration-200" href="#contato">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-[10px] font-medium font-['Plus_Jakarta_SANS']">Pedido</span>
+</a>
+</nav>
+<!-- Floating WhatsApp FAB -->
+<a class="fab-wpp fixed bottom-24 right-6 md:bottom-12 md:right-12 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-90 transition-all duration-300 z-40" href="#">
+<svg class="w-8 h-8 fill-current" viewbox="0 0 24 24">
+<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+</svg>
+</a>
+
+<script src="script.js"></script>
+</body></html>
