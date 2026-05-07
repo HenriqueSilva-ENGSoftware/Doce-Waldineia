@@ -324,7 +324,7 @@
             border-radius: 50%;
             background: #25D366;
             z-index: -1;
-            animation: ripple 2s infinite;
+            animation: ripple 3s infinite;
         }
         .fab-wpp::after { animation-delay: 1s; }
         @keyframes ripple {

@@ -167,3 +167,70 @@ if (secaoMenu) {
     });
   });
 }
+
+
+/* ---------- 6. BOTÕES "ADICIONAR AO PEDIDO" ---------- */
+document.querySelectorAll('.product-card').forEach(card => {
+  const botaoAdd = card.querySelector('button');
+  if (!botaoAdd) return;
+
+  botaoAdd.addEventListener('click', () => {
+    const nome = card.querySelector('h3')?.textContent.trim() || 'Produto';
+    const preco = card.querySelector('.price-tag')?.textContent.trim() || '';
+
+    carrinho.push({ nome, preco });
+    atualizarBadgeCarrinho();
+    mostrarToast(`✓ ${nome} adicionado ao pedido`);
+
+    // Feedback visual no botão
+    const textoOriginal = botaoAdd.textContent;
+    botaoAdd.textContent = 'Adicionado ✓';
+    botaoAdd.disabled = true;
+    setTimeout(() => {
+      botaoAdd.textContent = textoOriginal;
+      botaoAdd.disabled = false;
+    }, 1200);
+  });
+});
+
+
+/* ---------- 7. BOTÃO DA SACOLA (header) — finalizar pedido ---------- */
+const botaoSacola = document.querySelector('header button.text-primary');
+if (botaoSacola) {
+  botaoSacola.addEventListener('click', () => {
+    if (carrinho.length === 0) {
+      mostrarToast('Sua sacola está vazia 🛍️');
+      return;
+    }
+
+    let mensagem = "Olá Waldineia! 🍰 Gostaria de encomendar:\n\n";
+    carrinho.forEach((item, i) => {
+      mensagem += `${i + 1}. ${item.nome} — ${item.preco}\n`;
+    });
+    mensagem += "\nPode confirmar a disponibilidade, por favor?";
+
+    abrirWhatsApp(mensagem);
+  });
+}
+
+
+/* ---------- 8. FAB DO WHATSAPP (canto inferior direito) ---------- */
+const fabWhatsApp = document.querySelector('.fab-wpp');
+if (fabWhatsApp) {
+  fabWhatsApp.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let mensagem;
+    if (carrinho.length > 0) {
+      mensagem = "Olá Waldineia! 🍰 Gostaria de encomendar:\n\n";
+      carrinho.forEach((item, i) => {
+        mensagem += `${i + 1}. ${item.nome} — ${item.preco}\n`;
+      });
+      mensagem += "\nPode confirmar a disponibilidade?";
+    } else {
+      mensagem = "Olá Waldineia! 🍰 Vim pelo site e gostaria de tirar uma dúvida.";
+    }
+
+    abrirWhatsApp(mensagem);
+  });
+}
