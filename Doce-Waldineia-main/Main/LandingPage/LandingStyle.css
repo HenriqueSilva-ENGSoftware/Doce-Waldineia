@@ -58,7 +58,8 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -2;
-    transform: scale(1.02); 
+    transform: scale(1.02);
+    filter: blur(4.5px) brightness(1.2);
 }
 
 
@@ -74,7 +75,7 @@ body {
     z-index: -1;
 }
 
-/* Barra de navegação */
+/* Barra de navegação (Header) */
 .hero-nav {
     display: flex;
     justify-content: space-between;
