@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 :root {
     /* Tipografia */
     --font-heading: 'Georgia', serif;
@@ -96,6 +97,8 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+      font-family: "Quicksand", sans-serif;
+
 }
 
 .hero-nav nav {
