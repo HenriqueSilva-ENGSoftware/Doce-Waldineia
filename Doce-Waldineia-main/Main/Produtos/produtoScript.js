@@ -43,7 +43,7 @@ const PRODUTOS = [
         preco: 45.00,
         categoria: "doce",
         unidade: "un",
-        imagem: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80",
+        imagem: "https://guiadacozinha.com.br/wp-content/uploads/2005/01/Rocambole-de-goiabada.jpg",
         destaque: false,
         rating: 4.8
     },
@@ -55,7 +55,7 @@ const PRODUTOS = [
         preco: 3.50,
         categoria: "doce",
         unidade: "un",
-        imagem: "https://images.unsplash.com/photo-1582716401301-b2407dc7563d?w=600&q=80",
+        imagem: "file:///C:/Users/guilh/AppData/Local/Temp/macro_photography_of_six_traditional_brazilian_gourmet_beijinhos_arranged_in%20(1).png",
         destaque: false,
         rating: 4.7
     },
@@ -67,19 +67,19 @@ const PRODUTOS = [
         preco: 8.50,
         categoria: "salgado",
         unidade: "un",
-        imagem: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80",
+        imagem: "https://ouromineiro.com.br/wp-content/uploads/2024/09/IMG-20250123-WA0008.jpg",
         destaque: true,
         rating: 4.9
     },
     {
-        id: "empada-palmito",
-        nome: "Empada de Palmito",
-        descricao: "Massa amanteigada com recheio cremoso de palmito.",
-        detalhes: "Encomenda mínima de 10 unidades. Massa amanteigada, palmito pupunha refogado com cebola e ervas finas.",
+        id: "empada-frango",
+        nome: "Empada de Frango",
+        descricao: "Massa amanteigada com recheio cremoso de frango.",
+        detalhes: "Encomenda mínima de 10 unidades. Massa amanteigada, frango desfiado e ervas finas.",
         preco: 6.00,
         categoria: "salgado",
         unidade: "un",
-        imagem: "https://images.unsplash.com/photo-1607478900766-efe13248b125?w=600&q=80",
+        imagem: "https://www.seara.com.br/wp-content/uploads/2025/09/empada-de-frango-portal-minha-receita.webp",
         destaque: false,
         rating: 4.6
     },
@@ -91,7 +91,7 @@ const PRODUTOS = [
         preco: 7.00,
         categoria: "salgado",
         unidade: "un",
-        imagem: "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=600&q=80",
+        imagem: "https://minhasreceitinhas.com.br/wp-content/uploads/2023/05/pastel-de-feira-de-queijo.jpg",
         destaque: false,
         rating: 4.7
     },
@@ -103,7 +103,7 @@ const PRODUTOS = [
         preco: 12.00,
         categoria: "salgado",
         unidade: "un",
-        imagem: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80",
+        imagem: "https://www.receitasnestle.com.br/sites/default/files/srh_recipes/d6a6f84f954f7f2751faba4d2a7005cb.jpg",
         destaque: false,
         rating: 4.8
     }
