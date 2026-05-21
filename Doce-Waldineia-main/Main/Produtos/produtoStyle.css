@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 :root {
     /* Tipografia */
     --font-heading: 'Georgia', serif;
     --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-logo: 'Quicksand', sans-serif;
     
-        /* Cores */
-    --color-text: #ffffff;
+    /* Cores */
+    --color-bg: #faf8f5; 
+    --color-text-light: #ffffff;
+    --color-text-dark: #2c1e16;
     --color-accent: #e6b981; 
-    --color-overlay-1: rgba(30, 20, 15, 0.4); 
-    --color-overlay-2: rgba(30, 20, 15, 0.3);
-    --color-overlay-3: rgba(30, 20, 15, 0.7);
     
-    /* Botão */
+    /* Header e Botões */
+    --bg-header: rgba(25, 15, 10, 0.85); 
     --button-bg: rgba(255, 255, 255, 0.15);
     --button-hover-bg: var(--color-accent);
     --button-hover-text: #2c1e16; 
-    
+        
     /* Layout */
     --radius: 50px;
     --max-content-width: 900px;
@@ -35,6 +35,8 @@ html {
 
 body {
     font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text-dark);
     line-height: 1.6;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
@@ -46,52 +48,76 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 60px;
-    color: var(--color-text);
-    z-index: 2;
-    
-    background-color: rgba(25, 15, 10, 0.6);
-    backdrop-filter: blur(5px); 
-    -webkit-backdrop-filter: blur(5px); 
+    padding: 20px 5%; 
+    color: var(--color-text-light);
+    z-index: 10;
+    position: sticky; 
+    top: 0;
+    background-color: var(--bg-header);
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
     width: 100%; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    font-family: var(--font-heading);
+    font-family: var(--font-logo);
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-      font-family: "Quicksand", sans-serif;
+    transition: transform var(--transition-fast);
+    cursor: pointer;
+}
 
+.logo:hover {
+    transform: scale(1.02);
 }
 
 .hero-nav nav {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .hero-nav nav a {
-    color: var(--color-text);
+    color: var(--color-text-light);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: color var(--transition-fast), transform var(--transition-fast);
+    position: relative;
+    padding: 5px 0;
+    transition: color var(--transition-fast);
 }
 
-.hero-nav nav a:hover,
-.hero-nav nav a:focus-visible {
+.hero-nav nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-accent);
+    transition: width var(--transition-fast);
+}
+
+.hero-nav nav a:hover {
     color: var(--color-accent);
-    transform: translateY(-2px);
+}
+
+.hero-nav nav a:hover::after,
+.hero-nav nav a:focus-visible::after {
+    width: 100%;
 }
 
 .hero-nav nav a:focus-visible,
 .cta-button:focus-visible {
     outline: 2px dashed var(--color-accent);
     outline-offset: 6px;
+    border-radius: 4px;
 }
 
 /* Conteúdo central */
@@ -101,43 +127,45 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--color-text);
-    padding: 0 20px;
+    color: var(--color-text-light);
+    padding: 60px 20px;
     max-width: var(--max-content-width);
     margin: 0 auto;
     z-index: 2;
-    
-    /* Animação de entrada suave */
     opacity: 0;
     animation: fadeInUp 1s var(--transition-slow) forwards;
 }
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(2.5rem, 6vw, 5.5rem); 
     margin-bottom: 15px;
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
     letter-spacing: 2px;
     line-height: 1.1;
+    text-wrap: balance; /* Adicionado para títulos mais bonitos */
 }
 
 .hero-content p {
     font-family: var(--font-heading);
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
     max-width: 720px;
     margin-bottom: 40px;
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
     font-style: italic;
-    color: #f1f1f1;
+    color: #f8f8f8;
+    text-wrap: pretty; /* Evita palavras solitárias na última linha */
 }
 
 .cta-button {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 16px 45px;
     background-color: var(--button-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    color: var(--color-text);
+    color: var(--color-text-light);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -156,4 +184,35 @@ body {
     border-color: var(--button-hover-bg);
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade refinada para celulares */
+@media (max-width: 768px) {
+    .hero-nav {
+        /* Mantendo em linha para economizar espaço vertical */
+        padding: 15px 5%;
+    }
+    
+    .hero-nav nav {
+        gap: 12px; /* Reduzindo o espaço entre links no mobile */
+    }
+
+    .hero-nav nav a {
+        font-size: 0.85rem;
+    }
+    
+    .hero-content {
+        padding: 40px 15px;
+    }
 }
