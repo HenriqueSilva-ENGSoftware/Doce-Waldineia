@@ -157,3 +157,33 @@ body {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
+.hero-nav nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    position: relative; 
+}
+
+.hero-nav nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -6px; 
+    left: 0;
+    background-color: var(--color-accent); 
+    transition: width 0.3s ease; 
+}
+
+.hero-nav nav a:hover {
+    color: var(--color-accent);
+}
+
+.hero-nav nav a:hover::after,
+.hero-nav nav a:focus-visible::after {
+    width: 100%;
+}

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 :root {
     /* Tipografia */
     --font-heading: 'Georgia', serif;
@@ -48,76 +49,50 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5%; 
-    color: var(--color-text-light);
-    z-index: 10;
-    position: sticky; 
-    top: 0;
-    background-color: var(--bg-header);
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px); 
+    padding: 25px 60px;
+    color: var(--color-text);
+    z-index: 2;
+    
+    background-color: rgba(25, 15, 10, 0.6);
+
     width: 100%; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    font-family: var(--font-logo);
+    font-family: var(--font-heading);
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: 1px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-    transition: transform var(--transition-fast);
-    cursor: pointer;
-}
 
-.logo:hover {
-    transform: scale(1.02);
 }
 
 .hero-nav nav {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .hero-nav nav a {
-    color: var(--color-text-light);
+    color: var(--color-text);
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    position: relative;
-    padding: 5px 0;
-    transition: color var(--transition-fast);
+    transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
-.hero-nav nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color-accent);
-    transition: width var(--transition-fast);
-}
-
-.hero-nav nav a:hover {
+.hero-nav nav a:hover,
+.hero-nav nav a:focus-visible {
     color: var(--color-accent);
-}
-
-.hero-nav nav a:hover::after,
-.hero-nav nav a:focus-visible::after {
-    width: 100%;
+    transform: translateY(-2px);
 }
 
 .hero-nav nav a:focus-visible,
 .cta-button:focus-visible {
     outline: 2px dashed var(--color-accent);
     outline-offset: 6px;
-    border-radius: 4px;
 }
 
 /* Conteúdo central */
@@ -143,29 +118,27 @@ body {
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
     letter-spacing: 2px;
     line-height: 1.1;
-    text-wrap: balance; /* Adicionado para títulos mais bonitos */
+    text-wrap: balance;
 }
 
 .hero-content p {
     font-family: var(--font-heading);
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
     max-width: 720px;
     margin-bottom: 40px;
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
     font-style: italic;
-    color: #f8f8f8;
-    text-wrap: pretty; /* Evita palavras solitárias na última linha */
+    color: #f1f1f1;
+    text-wrap: pretty;
 }
 
 .cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     padding: 16px 45px;
     background-color: var(--button-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    color: var(--color-text-light);
+    color: var(--color-text);
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
@@ -215,4 +188,34 @@ body {
     .hero-content {
         padding: 40px 15px;
     }
+}
+.hero-nav nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    position: relative; 
+}
+
+.hero-nav nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -6px; 
+    left: 0;
+    background-color: var(--color-accent); 
+    transition: width 0.3s ease; 
+}
+
+.hero-nav nav a:hover {
+    color: var(--color-accent);
+}
+
+.hero-nav nav a:hover::after,
+.hero-nav nav a:focus-visible::after {
+    width: 100%;
 }

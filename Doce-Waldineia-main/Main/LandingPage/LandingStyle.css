@@ -3,6 +3,7 @@
     /* Tipografia */
     --font-heading: 'Georgia', serif;
     --font-body: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-logo: 'Quicksand', sans-serif;
     
         /* Cores */
     --color-text: #ffffff;
@@ -97,7 +98,7 @@ body {
     font-weight: bold;
     letter-spacing: 1px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-      font-family: "Quicksand", sans-serif;
+
 
 }
 
@@ -149,11 +150,12 @@ body {
 
 .hero-content h1 {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(2.5rem, 6vw, 5.5rem);
     margin-bottom: 15px;
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
     letter-spacing: 2px;
     line-height: 1.1;
+    text-wrap: balance;
 }
 
 .hero-content p {
@@ -164,6 +166,7 @@ body {
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
     font-style: italic;
     color: #f1f1f1;
+    text-wrap: pretty;
 }
 
 .cta-button {
@@ -207,27 +210,19 @@ body {
 
 @media (max-width: 768px) {
     .hero-nav {
-        padding: 20px;
-        flex-direction: column;
-        gap: 20px;
+        padding: 15px 5%;
     }
-
+    
     .hero-nav nav {
-        gap: 20px;
-        justify-content: center;
+        gap: 12px;
     }
 
     .hero-nav nav a {
         font-size: 0.85rem;
     }
-
-    .hero-content {
-        padding: 0 16px;
-        margin-top: -30px; 
-    }
     
-    .cta-button {
-        padding: 14px 35px;
+    .hero-content {
+        padding: 40px 15px;
     }
 }
 
